@@ -12,9 +12,13 @@
         "text": "step2-Deploy-Web-Frontend-Service.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
-      }
+        "title": "Step 3 Deploy our Elasticsearch based backend NoSql service",
+        "text": "step3-Deploy-Elasticsearch-Service.md"
+      },
+      {
+        "title": "Step 4 Deploy our Kibana based backend Dashboard service",
+        "text": "step4-Deploy-Kibana-Service.md"
+      }      
     ],
     "intro": {
       "text": "intro.md"
@@ -36,7 +40,7 @@
     "uieditorpath": "/root/course",
     "showdashboard": true,
     "dashboards": [
-      { "name": "Kubernetes", "port": 30080, "host": "host01" },
+      { "name": "NgInx", "port": 30080, "host": "host01" },
       { "name": "Kibana", "port": 30601 }
     ]
   },
