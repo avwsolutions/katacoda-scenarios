@@ -1,0 +1,32 @@
+{
+  "title": "Setup Your Digital Forensics Platform in matter of Minutes with Sysdig \u0026 Elastic Stack",
+  "description": "Tutorial for learning how to implement a Open Source based Digital Forensics Platform that support setting up a solution",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 Validate Our Up and Running Kubernetes Cluster",
+        "text": "step1-Validate-Kubernetes-Cluster-Readiness.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
