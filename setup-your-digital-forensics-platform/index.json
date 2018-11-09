@@ -8,8 +8,8 @@
         "text": "step1-Validate-Kubernetes-Cluster-Readiness.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Step 2 Deploy our NgInx based Frontend Web Service",
+        "text": "step2-Deploy-Web-Frontend-Service.md"
       },
       {
         "title": "Step 3",
