@@ -18,7 +18,11 @@
       {
         "title": "Step 4 Deploy our Kibana based backend Dashboard service",
         "text": "step4-Deploy-Kibana-Service.md"
-      }      
+      },
+      {
+        "title": "Step 5 Deploy our Falco based backend Security Monitoring service",
+        "text": "step5-Deploy-Falco-Service.md"
+      }
     ],
     "intro": {
       "text": "intro.md"
