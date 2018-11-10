@@ -1,0 +1,7 @@
+falco:
+  jsonOutput: true
+  jsonIncludeOutputProperty: true
+
+  programOutput:
+    enabled: true
+    program: " echo '{text: .output}' /tmp/events.out"

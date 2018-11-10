@@ -1,5 +1,10 @@
+#### First init Helm, which is the Kubernetes Package Manager
 
-`kubectl apply -f /root/course/falco-daemonset.yaml`{{execute HOST1}}
+`helm init`{{execute HOST1}}
+
+### Install Sysdig Falco through a predefined Helm Package
+
+`helm install --name sysdig-falco-1 -f /root/course/falco-values.yaml stable/falco`{{execute HOST1}}
 
 #### Verify that Falco is running 
 
