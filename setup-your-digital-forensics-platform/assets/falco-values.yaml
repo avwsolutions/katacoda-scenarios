@@ -4,4 +4,4 @@ falco:
 
   programOutput:
     enabled: true
-    program: " echo '{text: .output}' /tmp/events.out"
+    program: "curl -H 'Content-Type: application/json' -d @- -X PUT http://elasticsearch.default.svc.cluster.local:9200/sysdig/_doc/1"
