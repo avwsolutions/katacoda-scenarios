@@ -18,7 +18,7 @@ spec:
           image: falcosecurity/falco:latest
           securityContext:
             privileged: true
-          args: [ "/usr/bin/falco", "-K", "/var/run/secrets/kubernetes.io/serviceaccount/token", "-k", "https://kubernetes.default", "-pk", "-o", "json_output=true", "-o", "program_output.enabled=true", "-o",  "program_output.program=jq '{text: .output}' | curl -H "Content-Type: application/json" -d @- -X POST http://elasticsearch:9200/logstash/doc"]
+          args: [ "/usr/bin/falco", "-K", "/var/run/secrets/kubernetes.io/serviceaccount/token", "-k", "https://kubernetes.default", "-pk", "-o", "json_output=true", "-o", "program_output.enabled=true", "-o",  "program_output.program=jq '{text: .output}' | curl -H 'Content-Type: application/json' -d @- -X POST http://elasticsearch:9200/logstash/doc"]
           volumeMounts:
             - mountPath: /host/var/run/docker.sock
               name: docker-socket
