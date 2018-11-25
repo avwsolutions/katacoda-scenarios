@@ -16,6 +16,7 @@ kind: Service
 metadata:
   name: sysdig-inspect
 spec:
+  type: NodePort
   ports:
   - port: 3000
     nodePort: 30000
