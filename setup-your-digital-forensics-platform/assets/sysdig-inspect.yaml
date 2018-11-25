@@ -18,7 +18,7 @@ metadata:
 spec:
   ports:
   - port: 3000
-    NodePort: 30000
+    nodePort: 30000
   selector:
     app: sysdig-inspect
 ---
