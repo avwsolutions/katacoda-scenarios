@@ -11,13 +11,13 @@ spec:
     ports:
     - containerPort: 3000 
     volumeMounts:
-    - mountPath: /usr/local/src 
+    - mountPath: /data
       name: sources
   volumes:
   - name: sources
     hostPath:
       # directory location on host
-      path: /usr/local/src
+      path: /tmp
       # this field is optional
       type: Directory
 ---
