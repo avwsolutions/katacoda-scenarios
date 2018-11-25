@@ -14,7 +14,18 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sysdig-inspect 
+  name: sysdig-inspect
+spec:
+  ports:
+  - port: 3000
+    NodePort: 30000
+  selector:
+    app: sysdig-inspect
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sysdig-inspect-local 
 spec:
   ports:
   - port: 3000
