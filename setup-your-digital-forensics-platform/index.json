@@ -22,6 +22,10 @@
       {
         "title": "Step 5 Deploy our Falco based backend Security Monitoring service",
         "text": "step5-Deploy-Falco-Service.md"
+      },
+      {
+        "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
+        "text": "step6-Deploy-Inspect-Service.md"
       }
     ],
     "intro": {
@@ -45,7 +49,8 @@
     "showdashboard": true,
     "dashboards": [
       { "name": "NgInx", "port": 30080, "host": "host01" },
-      { "name": "Kibana", "port": 30601 }
+      { "name": "Kibana", "port": 30601 },
+      { "name": "Sysdig-Inspect", "port": 3000 }
     ]
   },
   "backend": {
