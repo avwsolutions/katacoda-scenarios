@@ -10,6 +10,16 @@ spec:
     image: sysdiglabs/sysdig-inspect:0.1 
     ports:
     - containerPort: 3000 
+  volumeMounts:
+    - mountPath: /usr/local/src 
+      name: sources
+  volumes:
+  - name: sources
+    hostPath:
+      # directory location on host
+      path: /usr/local/src
+      # this field is optional
+      type: Directory
 ---
 apiVersion: v1
 kind: Service
