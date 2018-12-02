@@ -55,7 +55,7 @@
     "dashboards": [
       { "name": "NgInx", "port": 30080, "host": "host01" },
       { "name": "Kibana", "port": 30601 },
-      { "name": "Sysdig-Inspect", "port": 3000 }
+      { "name": "Sysdig-Inspect", "port": 30000 }
     ]
   },
   "backend": {
