@@ -6,7 +6,7 @@ First we will setup the logstash configuration, which needs to be available at o
 
 `ssh -oStrictHostKeyChecking=no root@node01 "mkdir -p /pods/logstash/configuration ; cd /pods/logstash/configuration ; chmod -R 755 .; tar -xvf /root/course/example-configuration.tar"`{{execute HOST1}}
 
-:warning:: During this exercise we are using a [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) volume type, local to the Kubernetes node, only for single-node demonstration purposes. Use a different volume type for real use, which scales over multiple Kubernetes nodes. 
+:warning: : During this exercise we are using a [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) volume type, local to the Kubernetes node, only for single-node demonstration purposes. Use a different volume type for real use, which scales over multiple Kubernetes nodes. 
 
 #### Deploy Logstash:
 
