@@ -1,8 +1,15 @@
 Filebeat will connect to Elasticsearch and Kibana running in the Kubernetes cluster.  
 
-#### Deploy Elasticsearch:
+#### Setup Logstash configuration
 
-`kubectl apply -f /root/course/es.yaml`{{execute HOST1}}
+First we will setup the logstash configuration, which needs to be available at our Kubernetes node
+
+
+#### Deploy Logstash:
+
+`kubectl apply -f /root/course/logstash.yaml`{{execute HOST1}}
+`hostname`{{execute HOST1}}
+`hostname`{{execute HOST2}}
 
 **Note**: This YAML file is deploying Elasticsearch without a persistent store, as this course is meant to live for less than 30 minutes.  Do not use es.yaml to deploy Elasticsearch for real use. You should use our official Docker images found at http://docker.elastic.co
 
@@ -14,7 +21,7 @@ Checking the pods:
 
 Checking the logs:
 
-`kubectl logs es | grep "mode \[basic\] - valid"`{{execute HOST1}}
+`kubectl logs es | grep "Pipeline started successfully"`{{execute HOST1}}
 
 When Elasticsearch is fully initialized, you will see a log entry indicating that the license file is valid.
 
