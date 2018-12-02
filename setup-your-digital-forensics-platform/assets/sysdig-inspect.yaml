@@ -11,13 +11,13 @@ spec:
     ports:
     - containerPort: 3000 
     volumeMounts:
-    - mountPath: /data
-      name: sources
+    - mountPath: /usr/bin/sysdig-inspect/captures 
+      name: captures
   volumes:
-  - name: sources
+  - name: captures
     hostPath:
       # directory location on host
-      path: /tmp
+      path: /pods/sysdig/captures
       # this field is optional
       type: Directory
 ---
