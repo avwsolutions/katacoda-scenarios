@@ -45,6 +45,12 @@
           "file": "*",
           "target": "/root/course"
         }
+      ],
+      "node01": [
+        {
+          "file": "*",
+          "target": "/root/course"
+        }
       ]
     }
   },
