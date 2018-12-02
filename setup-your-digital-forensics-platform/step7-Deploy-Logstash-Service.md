@@ -4,12 +4,13 @@ Filebeat will connect to Elasticsearch and Kibana running in the Kubernetes clus
 
 First we will setup the logstash configuration, which needs to be available at our Kubernetes node
 
+`ssh -oStrictHostKeyChecking=no root@node01 "mkdir -p /pods/logstash/configuration ; cd /pods/logstash/configuration ; chmod -R 755 .; tar -xvf /root/course/example-configuration.tar"`{{execute HOST1}}
+
+:warning:: During this exercise we are using a [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) volume type, local to the Kubernetes node, only for single-node demonstration purposes. Use a different volume type for real use, which scales over multiple Kubernetes nodes. 
 
 #### Deploy Logstash:
 
 `kubectl apply -f /root/course/logstash.yaml`{{execute HOST1}}
-`hostname`{{execute HOST1}}
-`hostname`{{execute NODE1}}
 
 **Note**: This YAML file is deploying Elasticsearch without a persistent store, as this course is meant to live for less than 30 minutes.  Do not use es.yaml to deploy Elasticsearch for real use. You should use our official Docker images found at http://docker.elastic.co
 
