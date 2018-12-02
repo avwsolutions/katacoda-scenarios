@@ -26,7 +26,12 @@
       {
         "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
         "text": "step6-Deploy-Inspect-Service.md"
+      },
+      {
+        "title": "Step 7 Deploy our Logstash service",
+        "text": "step7-Deploy-Logstash-Service.md"
       }
+      
     ],
     "intro": {
       "text": "intro.md"
