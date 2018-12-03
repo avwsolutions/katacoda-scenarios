@@ -1,3 +1,4 @@
+Now that we have successfully deployed our Elasticsearch node we still need the visualisation layer, which consists of Kibana. Kibana is the Dashboard application which helps you searching through your data and creating awesome dashboards.
 
 `kubectl apply -f /root/course/kibana.yaml`{{execute HOST1}}
 
