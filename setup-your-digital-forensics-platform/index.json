@@ -1,31 +1,35 @@
 {
-  "title": "Digital Forensics Platform in matter of Minutes with Sysdig \u0026 Elastic Stack",
-  "description": "Tutorial for seting up Sysdig & Elastic Stack on k8s",
+  "title": "Setup multi-platform Threat Hunting Platform with Sysdig \u0026 Elastic Stack",
+  "description": "Threat Hunting & analysis using Sysdig & Elastic Stack on k8s",
   "details": {
     "steps": [
       {
-        "title": "Step 1 Validate Our Up and Running Kubernetes Cluster",
-        "text": "step1-Validate-Kubernetes-Cluster-Readiness.md"
+        "title": "Validate Our Up and Running Kubernetes Cluster",
+        "text": "Validate-Kubernetes-Cluster-Readiness.md"
       },
       {
-        "title": "Step 2 Deploy our Elasticsearch based backend NoSql service",
-        "text": "step2-Deploy-Elasticsearch-Service.md"
+        "title": "Deploy our Elasticsearch Database service",
+        "text": "Deploy-Elasticsearch-Service.md"
       },
       {
-        "title": "Step 4 Deploy our Kibana based backend Dashboard service",
-        "text": "step4-Deploy-Kibana-Service.md"
+        "title": "Deploy our Kibana Dashboard service",
+        "text": "Deploy-Kibana-Service.md"
+      },
+      {
+        "title": "Deploy our Logstash service",
+        "text": "Deploy-Logstash-Service.md"
       },
       {
         "title": "Step 5 Deploy our Falco based backend Security Monitoring service",
-        "text": "step5-Deploy-Falco-Service.md"
+        "text": "Deploy-Falco-Service.md"
       },
       {
         "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
-        "text": "step6-Deploy-Inspect-Service.md"
+        "text": "Deploy-Inspect-Service.md"
       },
       {
         "title": "Step 7 Deploy our Logstash service",
-        "text": "step7-Deploy-Logstash-Service.md"
+        "text": "Deploy-Logstash-Service.md"
       }
       
     ],
