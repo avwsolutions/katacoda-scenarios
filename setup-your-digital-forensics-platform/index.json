@@ -1,6 +1,6 @@
 {
-  "title": "Setup Your Digital Forensics Platform in matter of Minutes with Sysdig \u0026 Elastic Stack",
-  "description": "Tutorial for learning how to implement a Open Source based Digital Forensics Platform that support setting up a solution",
+  "title": "Digital Forensics Platform in matter of Minutes with Sysdig \u0026 Elastic Stack",
+  "description": "Tutorial for seting up Sysdig & Elastic Stack on k8s",
   "details": {
     "steps": [
       {
