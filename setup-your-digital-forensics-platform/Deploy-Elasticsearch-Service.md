@@ -1,4 +1,4 @@
-First we will start with deploying our elasticsearch node on the *k8s* cluster. Elasticsearch is used for storing our gathered data as JSON documents and make the easy searchable.
+First we will start with deploying our Elasticsearch node on the *k8s cluster*. Elasticsearch is used for storing our gathered data as **JSON** documents and make the easy searchable.
 
 #### Deploy Elasticsearch:
 
