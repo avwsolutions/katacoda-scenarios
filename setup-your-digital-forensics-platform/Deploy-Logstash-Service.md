@@ -1,4 +1,4 @@
-Sysdig Falco will connect to Logstash JSON API at port TCP/8888. The Logstash service is hosted in the Kubernetes cluster.  
+Logstash is used to connect all our data sources, such as Sysdig. The Logstash service is hosted on the Kubernetes cluster.  
 
 #### Setup Logstash configuration
 
