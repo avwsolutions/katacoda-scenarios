@@ -8,12 +8,8 @@
         "text": "step1-Validate-Kubernetes-Cluster-Readiness.md"
       },
       {
-        "title": "Step 2 Deploy our NgInx based Frontend Web Service",
-        "text": "step2-Deploy-Web-Frontend-Service.md"
-      },
-      {
-        "title": "Step 3 Deploy our Elasticsearch based backend NoSql service",
-        "text": "step3-Deploy-Elasticsearch-Service.md"
+        "title": "Step 2 Deploy our Elasticsearch based backend NoSql service",
+        "text": "step2-Deploy-Elasticsearch-Service.md"
       },
       {
         "title": "Step 4 Deploy our Kibana based backend Dashboard service",
