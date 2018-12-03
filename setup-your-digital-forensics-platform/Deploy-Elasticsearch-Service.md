@@ -1,10 +1,10 @@
-First we will start with deploying our Elasticsearch node on the *k8s cluster*. Elasticsearch is used for storing our gathered data as **JSON** documents and make the easy searchable.
+First we will start with deploying our Elasticsearch node on the *k8s cluster*. Elasticsearch is used for storing our gathered data as *JSON documents* and make them easy searchable.
 
 #### Deploy Elasticsearch:
 
 `kubectl apply -f /root/course/es.yaml`{{execute HOST1}}
 
-**Note**: This YAML file is deploying Elasticsearch without a persistent store, as this course is meant to live for less than 30 minutes.  Do not use es.yaml to deploy Elasticsearch for real use. You should use our official Docker images found at http://docker.elastic.co
+**Note**: This YAML file is deploying Elasticsearch without a persistent store, as this course is meant to live for less than 30 minutes.  Do not use es.yaml to deploy Elasticsearch for real use.
 
 #### Verify that Elasticsearch is running
 
