@@ -10,7 +10,9 @@ Now use ssh to access the node01 terminal.
 
 `ssh -oStrictHostKeyChecking=no root@node01`{{execute HOST1}}
 
-#### Now that we have entered the *node01* terminal we can start our `sysdig -w tracing` 
+#### Now that we have entered the *node01* terminal we can start our tracing
+
+with `sysdig -w tracing` 
 
 `cd /pods/sysdig/captures ; sysdig -w nginx.scap &`{{execute HOST1}}
 
