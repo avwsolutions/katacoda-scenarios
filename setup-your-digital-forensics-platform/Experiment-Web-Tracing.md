@@ -48,5 +48,7 @@ Besides that also other great queries are available. Just an example to get the 
 
 Now it's time start playing around in the GUI
 
+Now open the **Sysdig Inspect** tab which is available next to the **Terminal** tab and open the capture file. For our current capture use `captures/nginx.scap` as input file. 
+
 ![Sysdig Inspect Experiment4](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/experiment4.png)
 
