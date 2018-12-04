@@ -42,7 +42,7 @@ Now re-use the container.id to get more information about this container
 
 Besides that also other great queries are available. Just an example to get the running HTML file which is accessed during our capture. Please extra attention various options like `fd`/`evt` that are used.
 
-`sysdig -r nginx.scap -p "%evt.time %fd.directory %fd.filename" "evt.type=open and evt.dir=< and proc.name=nginx"{{execute HOST1}}
+`sysdig -r nginx.scap -p "%evt.time %fd.directory %fd.filename" "evt.type=open and evt.dir=< and proc.name=nginx"`{{execute HOST1}}
 
 #### Using the GUI called Inspect
 
