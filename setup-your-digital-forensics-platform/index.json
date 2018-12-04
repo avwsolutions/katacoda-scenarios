@@ -16,6 +16,14 @@
         "text": "Deploy-Kibana-Service.md"
       },
       {
+        "title": "Deploy our Falco service with Helm",
+        "text": "Deploy-Falco-Service.md"
+      },
+      {
+        "title": "Start our first experiment",
+        "text": "Experiment-First-Impression.md"
+      },
+      {
         "title": "Deploy our Logstash service",
         "text": "Deploy-Logstash-Service.md"
       },

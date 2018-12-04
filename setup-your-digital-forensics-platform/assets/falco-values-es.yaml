@@ -1,0 +1,7 @@
+falco:
+  jsonOutput: true
+  jsonIncludeOutputProperty: true
+
+  programOutput:
+    enabled: true
+    program: "\"curl -H 'Content-Type: application/json' -d @- -X POST http://elasticsearch.default.svc.cluster.local:9200/sysdig/doc\""
