@@ -12,4 +12,5 @@ Time to start our first experiment. This experiment is using a API connection to
 
 `cat /etc/shadow`{{execute HOST1}} 
 
-Now open the **Kibana** tab which is available next to the **Terminal** tab and lookup the corresponding events.
+Now open the **Kibana** tab which is available next to the **Terminal** tab and lookup the corresponding events. if you are opening Kibana for the first time you always have to set the *Kibana Index Pattern* with corresponding *Time* attribute. The attribute in our example is called *time*.
+

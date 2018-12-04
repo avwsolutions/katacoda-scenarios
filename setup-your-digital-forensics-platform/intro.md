@@ -15,7 +15,7 @@ Wwe will end with an experiment around Sysdig Inspect and using the core tracing
 
 This is one of the out of the box dashboards that you will see once you deploy the Elastic Stack in this Katacoda environment.  This is the Docker metrics dashboard that ships with Metricbeat.  It shows an overview of the CPU and Memory use of every container, allows you to drill in to a specific container, and the containers per node.  Looking at the dashboard is much easier than running the equivalent kubectl get, top, describe, etc. commands.
 
-![Docker Dash](https://user-images.githubusercontent.com/25182304/44353691-c2bb8c00-a475-11e8-8d0e-9578c5c8cc47.png)
+![Kibana Example](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/example1.png)
 
 ### A Quick Katacoda Primer
 If this is your first time using Katacoda, let me introduce some of the cool ideas:
