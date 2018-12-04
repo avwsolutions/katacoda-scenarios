@@ -40,10 +40,13 @@
         "text": "Experiment-Web-Service.md"
       },
       {
-        "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
+        "title": "Deploy our forensic diagnosing and Analysis service",
         "text": "Deploy-Inspect-Service.md"
+      },
+      {
+        "title": "Start Tracing with Sysdig and analysing with Inspect",
+        "text": "Experiment-Web-Tracing.md"
       }
-      
     ],
     "intro": {
       "text": "intro.md"
