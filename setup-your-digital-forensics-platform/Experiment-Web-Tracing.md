@@ -1,21 +1,52 @@
-Now that we have a NgInx Pod up and running we can hack into the container. We will demonstrate the power of Falcon and the possibilities using the ELK stack.
+Now that we seen Sysdig Falco, we will now do a sneak preview into Sysdig Inspect. Which really is a packetsniffer on the Linux kernel layer.
 
-#### First step is to spawn into the nginx Pod. 
+#### First step is to sysdig directly into the running *k8s* node. 
 
-`kubectl exec -it nginx /bin/bash`{{execute HOST1}}
+`ssh -oStrictHostKeyChecking=no root@node01 "curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sudo bash"`{{execute HOST1}}
 
-Now open the **NgInx** tab which is available next to the **Terminal** tab and lookup the current webpage.
+**Note:** This is just an example for training purposes and not used in a real-life scenario.
 
-#### After we have connected try to replace the content of the *index.html* with sed. 
+Now use ssh to access the node01 terminal.
 
-`sed -i -e 's/Welcome to nginx/Hacked a nginx/g' /usr/share/nginx/html/index.html`{{execute HOST1}}
+`ssh -oStrictHostKeyChecking=no root@node01`{{execute HOST1}}
 
-Now look at the **Nginx** webpage again and see the content has changed, hacked !!! Lucky us we have some traceability in our ELK stack available.
+#### Now that we have entered the *node01* terminal we can start our `sysdig -w tracing` 
 
-Now open the **Kibana** tab which is available next to the **Terminal** tab and lookup the corresponding events. if you are opening Kibana for the first time you always have to set the *Kibana Index Pattern* with corresponding *Date* attribute. Our index which is currently created is called *logstash-** with a corresponding date attribute in our example is called *@Timestamp*.
+`cd /pods/sysdig/captures ; sysdig -w nginx.scap &`{{execute HOST1}}
 
-![Kibana Experiment3](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/experiment3.png)
+Open the **NgInx** tab again and open the webpage several times and try to access various virtual hosts/directies.
 
-Now play around on your es Pod and try to trigger the Falco alerting. Don't forget to *exit* to return to the *management console*
+Now don't forget to stop the capture proces with `kill %1`{{execute HOST1}}
 
-`exit`{{execute HOST1}}
+### Analysing your captured data with the CLI
+
+To analyse the captured data we have a CLI and GUI available. First we will go into the CLI.
+
+Look with `ls /nginx.scap` is in the current directory (should be `/pods/sysdig/captures`)
+
+This capture file contains all kernel tracing information from your Kubernetes Node. Great feature is that we can easily search through this file using Sysdig.
+
+First example is searching for all the *proc_name = nginx* data.
+
+`sysdig -r nginx.scap proc.name = nginx`{{execute HOST1}}
+
+Look through the data output. Maybe you can find your web requests
+
+Other example is getting the list of running containers on this *k8s* node.
+
+`sysdig -r nginx.scap -c lscontainers`{{execute HOST1}}
+
+Now re-use the container.id to get more information about this container
+
+`sysdig -r nginx.scap container.id = 1234567`{{execute HOST1}}
+
+Besides that also other great queries are available. Just an example to get the running HTML file which is accessed during our capture. Please extra attention various options like `fd`/`evt` that are used.
+
+`sysdig -r nginx.scap -p "%evt.time %fd.directory %fd.filename" "evt.type=open and evt.dir=< and proc.name=nginx"{{execute HOST1}}
+
+#### Using the GUI called Inspect
+
+Now it's time start playing around in the GUI
+
+![Sysdig Inspect Experiment4](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/experiment4.png)
+
