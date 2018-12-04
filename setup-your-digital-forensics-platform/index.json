@@ -28,10 +28,6 @@
         "text": "Deploy-Logstash-Service.md"
       },
       {
-        "title": "Deploy our Falco service with using Logstash",
-        "text": "Experiment-Using-Logstash.md"
-      },
-      {
         "title": "Start a second experiment and add some custom rules",
         "text": "Experiment-Adding-custom-rules.md"
       },

@@ -1,4 +1,8 @@
+In the last experiment we where using a direct REST API call towards Elasticsearch, which works but has some constraints such as caching and enrichment capabilities. For this you can use either [Fluentd](https://www.fluentd.org/) (EFK) or [Logstash](https://www.elastic.co/products/logstash) (ELK). During this experiment we will redeploy our Sysdig Falco pods with a new configuration to directly integrate with the ELK stack and take advantages of the persistent queue and enrichments functions available to respond on Sysdig events.
+
 Now that we have tested the default-rules we are at the moment that we can add some additional rules. Luckely for us Sysdig provide a great extra ruleset at [Github](https://github.com/draios/falco-extras), which almost support the most favorite tools around, such as *NgInx* and *Elasticsearch*.
+
+**Note:** Don't forget to first remove your current *helm* package, which can be easily done with `helm delete --purge sysdig-falco-1`{{execute HOST1}}
 
 #### First step is to create our custom ruleset YAML file
 
