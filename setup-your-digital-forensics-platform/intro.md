@@ -10,6 +10,8 @@ Sysdig and Elastic Stack are the main ingredients for this toolkit. Combining th
 First of all we will deploy the necessary components like the Elastic Stack in this Katacoda environment. After these deployment steps we will use [Helm](https://helm.sh/) to deploy our first experiment using Sysdig Falco. During this experiment we will take a look at the powerfull rule-engine and possibilites to automate alerting, in this case towards the Elastic stack. Second experiment will involve extending the default-ruleset with even more extra [rulesets]{https://github.com/draios/falco-extras). During this experiment we will trigger some elasticsearch specific alerts towards elasticsearch, isn't that funny.
 At the end will experiment around Sysdig Inspect and using the core tracing functionality. For this we will identify NgInx related behavior.
 
+Additionally i want to give some credits to @Micheal.Ducy and @Dan.Roscigno.
+
 ![Kibana Example](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/example1.png)
 
 ### A Quick Katacoda Primer
