@@ -1,12 +1,7 @@
-Time to start our first experiment. This experiment is using a API connection towards elasticsearch. During this experiment we will:
+In the last experiment we where using a direct REST API call towards Elasticsearch, which works but has some constraints such as caching and enrichment capabilities. For this you can use either [Fluentd](https://www.fluentd.org/) or [Logstash](https://www.elastic.co/products/logstash). During this experiment we will redeploy our Sysdig Falco pods with a new configuration to directly integrate with the ELK stack and take advantages of the persistent queue and enrichments functions available to respond on Sysdig events.
 
-* Opening a *BASH* towards our Pods and see the expected result in Kibana.
-* Try to access sensitive files, such as *'/etc/shadow'* and see the expected result in Kibana.
-* Looking into the default running *falco ruleset*.
+**Note:** Don't forget to first remove your current *helm* package, which can be easily done with `helm delete --purge sysdig-falco-1`{{execute HOST1}}
 
-#### First we will open a *BASH* session towards our *es* Pod. 
-
-`kubectl exec -it es /bin/bash`{{execute HOST1}}
 
 #### After we have connected try to look at the one or more *sensitive files*.
 
@@ -19,7 +14,3 @@ Now open the **Kibana** tab which is available next to the **Terminal** tab and 
 Now play around on your es Pod and try to trigger the Falco alerting. Don't forget to *exit* to return to the *management console*
 
 `exit`{{execute HOST1}}
-
-and remove your current *sysdig-falco* Pods.
-
-`helm delete --purge sysdig-falco-1`{{execute HOST1}}

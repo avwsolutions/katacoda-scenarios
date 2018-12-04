@@ -1,4 +1,7 @@
-Logstash is used to connect all our data sources, such as Sysdig. The Logstash service is hosted on the Kubernetes cluster.  
+In the last experiment we where using a direct REST API call towards Elasticsearch, which works but has some constraints such as caching and enrichment capabilities. For this you can use either [Fluentd](https://www.fluentd.org/) or [Logstash](https://www.elastic.co/products/logstash). During this experiment we will redeploy our Sysdig Falco pods with a new configuration to directly integrate with the
+ ELK stack and take advantages of the persistent queue and enrichments functions available to respond on Sysdig events.
+
+**Note:** Don't forget to first remove your current *helm* package, which can be easily done with `helm delete --purge sysdig-falco-1`{{execute HOST1}}
 
 #### Setup Logstash configuration
 
