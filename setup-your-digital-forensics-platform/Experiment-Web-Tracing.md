@@ -24,7 +24,7 @@ Now don't forget to stop the capture proces with `kill %1`{{execute HOST1}}
 
 To analyse the captured data we have a CLI and GUI available. First we will go into the CLI.
 
-Look with `ls /nginx.scap` is in the current directory (should be `/pods/sysdig/captures`)
+Look with `ls nginx.scap` is in the current directory (should be `/pods/sysdig/captures`)
 
 This capture file contains all kernel tracing information from your Kubernetes Node. Great feature is that we can easily search through this file using Sysdig.
 
