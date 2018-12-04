@@ -18,4 +18,4 @@ Check the pods for Falco:
 
 Check the Falco logs:  
 
-`for pod in \\\`kubectl get pods --no-headers | grep sysdig-falco-1 | awk '{ print $1 }'\\\`; do kubectl logs $pod | grep -e "Falco initialized" -e "Loading rules" ; done`{{execute HOST1}}
+`for pod in $(kubectl get pods --no-headers | grep sysdig-falco-1 | awk '{ print $1 }'); do kubectl logs $pod | grep -e "Falco initialized" -e "Loading rules" ; done`{{execute HOST1}}
