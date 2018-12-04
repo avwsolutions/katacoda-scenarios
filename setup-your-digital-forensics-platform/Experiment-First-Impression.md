@@ -1,8 +1,8 @@
 Time to start our first experiment. This experiment is using a API connection towards elasticsearch. During this experiment we will:
 
-⋅⋅* Opening a *BASH* towards our Pods and see the expected result in Kibana.
-..* Try to access sensitive files, such as *'/etc/shadow'* and see the expected result in Kibana.
-..* Looking into the default running *falco ruleset*.
+* Opening a *BASH* towards our Pods and see the expected result in Kibana.
+* Try to access sensitive files, such as *'/etc/shadow'* and see the expected result in Kibana.
+* Looking into the default running *falco ruleset*.
 
 #### First we will open a *BASH* session towards our *es* Pod. 
 
