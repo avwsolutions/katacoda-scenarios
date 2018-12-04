@@ -28,8 +28,12 @@
         "text": "Deploy-Logstash-Service.md"
       },
       {
-        "title": "Step 5 Deploy our Falco based backend Security Monitoring service",
-        "text": "Deploy-Falco-Service.md"
+        "title": "Deploy our Falco service with using Logstash",
+        "text": "Experiment-Using-Logstash.md"
+      },
+      {
+        "title": "Start a second experiment and add some custom rules",
+        "text": "Experiment-Adding-custom-rules.md"
       },
       {
         "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
