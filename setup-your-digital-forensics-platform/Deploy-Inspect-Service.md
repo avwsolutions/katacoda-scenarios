@@ -14,4 +14,4 @@ Check the pods for sysdig-inspect:
 
 Check the Sysdig-Inspect logs:  
 
-`kubectl logs sysdig-inspect"`{{execute HOST1}}
+`kubectl logs sysdig-inspect`{{execute HOST1}}
