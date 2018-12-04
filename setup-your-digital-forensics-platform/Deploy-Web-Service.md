@@ -1,3 +1,6 @@
+After we have looked at elasticsearch we will now look at a Pod running NgInx. For this experiment we will first deploy this container.
+Follow the steps below to startup this web service.
+
 Deploy the nginx web service by running the `kubectl apply` command:
 
 `kubectl apply -f /root/course/nginx-kubernetes.yaml`{{execute}}

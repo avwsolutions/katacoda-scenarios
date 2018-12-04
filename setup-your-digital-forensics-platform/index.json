@@ -32,12 +32,16 @@
         "text": "Experiment-Adding-custom-rules.md"
       },
       {
-        "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
-        "text": "Deploy-Inspect-Service.md"
+        "title": "Deploy our Web service",
+        "text": "Deploy-Web-Service.md"
       },
       {
-        "title": "Step 7 Deploy our Logstash service",
-        "text": "Deploy-Logstash-Service.md"
+        "title": "Start hacking around in our Web Service",
+        "text": "Experiment-Web-Service.md"
+      },
+      {
+        "title": "Step 6 Deploy our Inspect based Forensic diagnosing and Analysis service",
+        "text": "Deploy-Inspect-Service.md"
       }
       
     ],
