@@ -14,6 +14,8 @@ Time to start our first experiment. This experiment is using a API connection to
 
 Now open the **Kibana** tab which is available next to the **Terminal** tab and lookup the corresponding events. if you are opening Kibana for the first time you always have to set the *Kibana Index Pattern* with corresponding *Date* attribute. Our index which is currently created is called *sysdig* with a corresponding date attribute in our example is called *time*.
 
+![Kibana Experiment1](https://raw.githubusercontent.com/avwsolutions/katacoda-scenarios/master/setup-your-digital-forensics-platform/images/experiment1.png
+
 Now play around on your es Pod and try to trigger the Falco alerting. Don't forget to *exit* to return to the *management console*
 
 `exit`{{execute HOST1}}
