@@ -4,4 +4,4 @@ falco:
 
   programOutput:
     enabled: true
-    program: "\"curl -H 'Content-Type: application/json' -d @- -X PUT http://elasticsearch.default.svc.cluster.local:9200/sysdig/_doc\""
+    program: "\"curl -H 'Content-Type: application/json' -d @- -X POST http://logstash.default.svc.cluster.local:8888\""

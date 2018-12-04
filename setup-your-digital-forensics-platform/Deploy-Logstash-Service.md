@@ -28,5 +28,3 @@ Checking the logs:
 `kubectl logs logstash | grep "Pipeline started successfully"`{{execute HOST1}}
 
 When Logstash is fully initialized, you will see a log entry indicating that the Pipeline started successfully.
-
-![Elasticsearch log](https://user-images.githubusercontent.com/25182304/43620198-8830e4a6-969f-11e8-9c05-0cd6ffc5ab96.png)
