@@ -6,7 +6,7 @@
   "details": {
     "steps": [{
       "title": "Step 1 - Run Command",
-      "courseData": "login-elastic.sh",
+      "code": "login-elastic.sh",
       "text": "step1.md"
     }],
     "intro": {
