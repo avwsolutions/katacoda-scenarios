@@ -24,7 +24,12 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "dashboards": [
+      { "name": "K8s Web UI", "port": 8001 },
+      { "name": "Kibana", "port": 35601 },
+      { "name": "Elasticsearch", "port": 39200 }
+    ]
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"
