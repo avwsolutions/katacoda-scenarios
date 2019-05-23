@@ -25,6 +25,7 @@
   },
   "environment": {
     "uilayout": "terminal",
+    "showdashboard": true,
     "dashboards": [
       { "name": "K8s Web UI", "port": 8001 },
       { "name": "Kibana", "port": 35601 },
