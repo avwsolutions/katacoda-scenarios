@@ -2,6 +2,9 @@
   "title": "elastic-eck-quickstart",
   "description": "Quickstart for learning Elastic Cloud on Kubernetes deployment and configuration",
   "details": {
+    "intro": {
+       "courseData": "intro-preparation.sh"
+    },
     "steps": [
       {
         "title": "Step 1",
