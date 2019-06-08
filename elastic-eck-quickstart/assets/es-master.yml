@@ -1,15 +1,16 @@
 apiVersion: elasticsearch.k8s.elastic.co/v1alpha1
 kind: Elasticsearch
 metadata:
-  name: k8s-es-data 
+  name: k8s-es-master
 spec:
   version: 7.1.0
   nodes:
-  - nodeCount: 2
+  - nodeCount: 1
     config:
       node.master: true
-      node.data: true
-      node.ingest: true
+      node.data: false 
+      node.ingest: false
+      node.ml: false 
     podTemplate:
       spec:
         containers:
@@ -17,4 +18,4 @@ spec:
             resources:
               limits:
                 memory: 1Gi
-                cpu: 500m
+                cpu: 200m
