@@ -25,6 +25,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "/root/course"
+        }
+      ]
     }
   },
   "environment": {
