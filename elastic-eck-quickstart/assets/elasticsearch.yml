@@ -5,17 +5,17 @@ metadata:
 spec:
   version: 7.1.0
   nodes:
-  - nodeCount: 3
+  - nodeCount: 2
     config:
-      cluster.name=k8s-cluster
+      cluster.name: k8s-cluster
       node.master: true
       node.data: true
       node.ingest: true
   podTemplate:
     spec:
       containers:
-        -name: k8s-es-data 
-         resources:
-           limits:
-             memory: "1Gi"
-             cpu: "500m"
+        - name: k8s-es-data 
+          resources:
+            limits:
+              memory: 1Gi
+              cpu: 500m
