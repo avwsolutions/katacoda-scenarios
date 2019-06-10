@@ -26,10 +26,11 @@ data:
 
     cloud.id: ${ELASTIC_CLOUD_ID}
     cloud.auth: ${ELASTIC_CLOUD_AUTH}
-    setup.kibana.host: "https://k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.host: "k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.protocol: "http"
     setup.kibana.username: ${ELASTICSEARCH_USERNAME}
     setup.kibana.password: ${ELASTICSEARCH_PASSWORD}
-    setup.kibana.ssl.enabled: true
+    setup.kibana.ssl.enabled: false
     setup.kibana.ssl.verification_mode: "none"
     setup.dashboards.enabled: true
 
@@ -201,10 +202,11 @@ data:
 
     cloud.id: ${ELASTIC_CLOUD_ID}
     cloud.auth: ${ELASTIC_CLOUD_AUTH}
-    setup.kibana.host: "https://k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.host: "k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.protocol: "http"
     setup.kibana.username: ${ELASTICSEARCH_USERNAME}
     setup.kibana.password: ${ELASTICSEARCH_PASSWORD}
-    setup.kibana.ssl.enabled: true
+    setup.kibana.ssl.enabled: false
     setup.kibana.ssl.verification_mode: "none"
     setup.dashboards.enabled: true
 
