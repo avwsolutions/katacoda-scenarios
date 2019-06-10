@@ -1,0 +1,32 @@
+apiVersion: kibana.k8s.elastic.co/v1alpha1
+kind: Kibana
+metadata:
+  name: k8s-fullstaq
+spec:
+  version: 7.1.0
+  nodeCount: 2
+  elasticsearchRef:
+    name: k8s-fullstaq
+  podTemplate:
+    metadata:
+      labels:
+        type: kibana-node
+    spec:
+      containers:
+      - name: kibana
+        resources:
+          limits:
+            memory: 500Mi
+            cpu: 900m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-exposed
+spec:
+  type: NodePort
+  ports:
+  - port: 5601
+    nodePort: 30561
+  selector:
+    type: kibana-node

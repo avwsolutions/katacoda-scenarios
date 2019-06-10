@@ -18,6 +18,14 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
       }
     ],
     "intro": {
@@ -40,8 +48,8 @@
     "showdashboard": true,
     "dashboards": [
       { "name": "K8s Web UI", "port": 8001 },
-      { "name": "Kibana", "port": 35601 },
-      { "name": "Elasticsearch", "port": 39200 }
+      { "name": "Kibana", "port": 30561  },
+      { "name": "Elasticsearch", "port": 30092 }
     ]
   },
   "backend": {
