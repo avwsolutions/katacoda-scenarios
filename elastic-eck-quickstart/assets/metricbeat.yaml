@@ -26,11 +26,18 @@ data:
 
     cloud.id: ${ELASTIC_CLOUD_ID}
     cloud.auth: ${ELASTIC_CLOUD_AUTH}
+    setup.kibana.host: "https://k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.username: ${ELASTICSEARCH_USERNAME}
+    setup.kibana.password: ${ELASTICSEARCH_PASSWORD}
+    setup.kibana.ssl.enabled: true
+    setup.kibana.ssl.verification_mode: "none"
+    setup.dashboards.enabled: true
 
     output.elasticsearch:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       username: ${ELASTICSEARCH_USERNAME}
       password: ${ELASTICSEARCH_PASSWORD}
+      ssl.verification_mode: "none"
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -112,16 +119,13 @@ spec:
         ]
         env:
         - name: ELASTICSEARCH_HOST
-          value: elasticsearch-exposed.default.svc.cluster.local
+          value: "https://k8s-fullstaq-es.default.svc.cluster.local"
         - name: ELASTICSEARCH_PORT
           value: "9200"
         - name: ELASTICSEARCH_USERNAME
           value: elastic
         - name: ELASTICSEARCH_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: k8s-fullstaq-elastic-user 
-              key: elastic 
+          value: "%changeme%"
         - name: ELASTIC_CLOUD_ID
           value:
         - name: ELASTIC_CLOUD_AUTH
@@ -197,11 +201,18 @@ data:
 
     cloud.id: ${ELASTIC_CLOUD_ID}
     cloud.auth: ${ELASTIC_CLOUD_AUTH}
+    setup.kibana.host: "https://k8s-fullstaq-kibana.default.svc.cluster.local:5601"
+    setup.kibana.username: ${ELASTICSEARCH_USERNAME}
+    setup.kibana.password: ${ELASTICSEARCH_PASSWORD}
+    setup.kibana.ssl.enabled: true
+    setup.kibana.ssl.verification_mode: "none"
+    setup.dashboards.enabled: true
 
     output.elasticsearch:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       username: ${ELASTICSEARCH_USERNAME}
       password: ${ELASTICSEARCH_PASSWORD}
+      ssl.verification_mode: "none"
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -252,13 +263,13 @@ spec:
         ]
         env:
         - name: ELASTICSEARCH_HOST
-          value: elasticsearch
+          value: "https://k8s-fullstaq-es.default.svc.cluster.local"
         - name: ELASTICSEARCH_PORT
           value: "9200"
         - name: ELASTICSEARCH_USERNAME
           value: elastic
         - name: ELASTICSEARCH_PASSWORD
-          value: changeme
+          value: "%changeme%"
         - name: ELASTIC_CLOUD_ID
           value:
         - name: ELASTIC_CLOUD_AUTH

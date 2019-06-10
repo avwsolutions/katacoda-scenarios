@@ -6,4 +6,6 @@ After we have applied the template we can see the objects created. Use the comma
 
 Lookup the created Services `kubectl get services`{{execute HOST1}}
 
-Lookup the created Pods `kubectl get pods`{{execute HOST1}}
+Lookup the created Pods `kubectl get pods`{{execute HOST1}} and wait til they all are Ready (1/1).
+
+It could take a while before all pods are started correctly. Message like *Readiness probe failed:* can be safely ignored.
