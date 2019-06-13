@@ -1,11 +1,17 @@
-## Now what we have deployed the *elastic-operator* we can start deploying our first Pods. 
+## Collect credentials, validate elasticsearch and open the [Kibana Console]
 
-We will start deploying a basic Elasticsearch cluster by applying the *elasticsearch.yaml* object template to Kubernetes.`kubectl apply -f course/elasticsearch.yaml`{{execute HOST1}} 
+Since Security is enabled by default we need a valid user account to login our Elastic stack. The default username is *elastic*. The password for this user is generated during deployment and stored in a Kubernetes Secrets Object. use the following commands to get the password and login into the Kibana console.
 
-After we have applied the template we can see the objects created. Use the commands below to validating the Services are created and the Pods are running  correctly. You can also use the Kubernetes UI for this.
+#### Retrieve password from Secret
+First we get the password by executing `PASSWORD=$(kubectl get secret k8s-fullstaq-elastic-user -o=jsonpath='{.data.elastic}'| base64 --decode)`{{execute HOST1}}
+Now copy the password to your clipboard `echo $PASSWORD`{{execute HOST1}}
 
-Lookup the created Services `kubectl get services`{{execute HOST1}}
+#### Retrieve elasticsearch Service IP
+Next we have to get Service (Cluster) IP to do our first connectivity check by executing `SERVICEIP=$(kubectl get services | grep 9200/TCP | awk '{print $3}')`{{execute HOST1}}
 
-Lookup the created Pods `kubectl get pods`{{execute HOST1}} and wait til they all are Ready (1/1).
+#### Validate elasticsearch cluster health
+`curl -k https://$SERVICEIP:9200/_cat/health?v -u elastic:$PASSWORD`{{execute HOST1}}
 
-It could take a while before all pods are started correctly. Message like *Readiness probe failed:* can be safely ignored.
+
+#### Open Kibana Console
+After this successfull test we can open our [Kibana console] https://[[HOST_SUBDOMAIN]]-30561-[[KATACODA_HOST]].environments.katacoda.com/

@@ -16,7 +16,7 @@ spec:
       - name: kibana
         resources:
           limits:
-            memory: 500Mi
+            memory: 1Gi
             cpu: 900m
 ---
 apiVersion: v1

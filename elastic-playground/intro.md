@@ -1,4 +1,11 @@
-# Welcome Elastic becomes Cloud Native
+# Welcome to the Cloud Native Elastic Playground 
 
-During **KubeCon 2019** Elastic launched their newest Alpha release for Elastic Cloud on Kubernetes aka ECK. To be honest this is great news !!!
-After this anouncement I directly wanted to experience this, which resulted in this online training based on Katacoda.
+This playground is delivered by Katacoda.
+
+
+## Disclaimer
+
+
+:warning: Never store classified (confidential) data of this sandbox environment :warning:
+This environment is for personal learning activities only !!!
+
