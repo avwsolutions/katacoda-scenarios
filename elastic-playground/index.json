@@ -1,6 +1,6 @@
 {
-  "title": "elastic-eck-quickstart",
-  "description": "Quickstart for learning Elastic Cloud on Kubernetes deployment and configuration",
+  "title": "elastic-eck-playground",
+  "description": "Playground for learn using Kibana",
   "details": {
     "intro": {
        "courseData": "playground-preparation.sh"
