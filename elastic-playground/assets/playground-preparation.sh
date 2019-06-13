@@ -3,7 +3,7 @@ status=1
 kubectl apply -f https://download.elastic.co/downloads/eck/0.8.0/all-in-one.yaml
 while [ $status -ne 0 ]
 do
-  kubectl -n elastic-system logs statefulset.apps/elastic-operator | grep "starting the webhookserver" 
+  kubectl -n elastic-system logs statefulset.apps/elastic-operator | grep "starting the webhook server" 
   status=$?
   echo $status
 done
