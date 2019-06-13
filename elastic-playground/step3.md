@@ -14,4 +14,5 @@ Next we have to get Service (Cluster) IP to do our first connectivity check by e
 
 
 #### Open Kibana Console
-After this successfull test we can open our [Kibana console] https://[[HOST_SUBDOMAIN]]-30561-[[KATACODA_HOST]].environments.katacoda.com/
+After this successfull test we can open our Kibana Console and log in with user *elastic* and provided password.
+[Kibana console] https://[[HOST_SUBDOMAIN]]-30561-[[KATACODA_HOST]].environments.katacoda.com/

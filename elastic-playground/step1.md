@@ -2,7 +2,7 @@
  
 #### Initialisation:
 
-Wait till all Pods are in READY (1/1) state.
+Wait till all Pods are in READY (1/1) state.This can take some minutes !!
 
 `kubectl get pods`{{execute HOST1}}
 
