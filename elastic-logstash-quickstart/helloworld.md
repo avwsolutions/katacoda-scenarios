@@ -21,7 +21,7 @@ Wait till you see the following log entry
 
 Also try to add more events. You can stop the pipeline with <CTRL>-D.
 
-### Question
+### Challenge !!! 
 
 Which flag is used to directly execute a pipeline (rules) from the CLI ?
 

@@ -8,8 +8,12 @@
         "text": "setup.md"
       },
       {
-        "title": "Hello world",
+        "title": "Simple pipeline",
         "text": "helloworld.md"
+      },
+      {
+        "title": "Advanced pipeline",
+        "text": "apachelog.md"
       }
     ],
     "intro": {
