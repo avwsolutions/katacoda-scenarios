@@ -1,0 +1,33 @@
+{
+  "title": "Elastic Logstash Quickstart",
+  "description": "Quickstart for learning Logstash Setup, Configuration and Rules",
+  "details": {
+    "steps": [
+      {
+        "title": "Download the package",
+        "text": "download.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "/root/course"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true
+  },
+  "backend": {
+    "imageid": "centos"
+  }
+}
