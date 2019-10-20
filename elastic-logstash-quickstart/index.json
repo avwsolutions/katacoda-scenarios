@@ -6,6 +6,10 @@
       {
         "title": "Setup logstash",
         "text": "setup.md"
+      },
+      {
+        "title": "Hello world",
+        "text": "helloworld.md"
       }
     ],
     "intro": {
