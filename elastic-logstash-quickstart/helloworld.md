@@ -11,6 +11,10 @@ More information can be found at [Logstash reference](https://www.elastic.co/gui
 
 `logstash-7.4.0/bin/logstash -e 'input { stdin { } } output { stdout {} }'`{{execute HOST1}}
 
+Wait till you see the following log entry
+
+``[2019-10-20T19:02:39,727][INFO ][logstash.agent           ] Successfully started Logstash API endpoint``
+
 ### Stash your first event
 
 `hello world`{{execute HOST1}}
