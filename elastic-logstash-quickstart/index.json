@@ -4,8 +4,8 @@
   "details": {
     "steps": [
       {
-        "title": "Download the package",
-        "text": "download.md"
+        "title": "Setup logstash",
+        "text": "setup.md"
       }
     ],
     "intro": {
