@@ -1,6 +1,6 @@
 # Introduction to this playground
 
-This playground can be used to get familiar with logstash and the capabilities without requiring a direct fully implemented ELK environment.
+This playground can be used to get familiar with logstash (currently 7.4.x) and the capabilities without requiring a direct fully implemented ELK environment.
 
 Logstash is an open source data collection engine with real-time pipelining capabilities. Logstash can dynamically unify data from disparate sources and normalize the data into destinations of your choice. Cleanse and democratize all your data for diverse advanced downstream analytics and visualization use cases.
 
