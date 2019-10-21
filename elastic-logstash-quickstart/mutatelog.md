@@ -36,7 +36,7 @@ Since we now applied the Grok filter we see all data in the message field is suc
 
 Our approach is the following:
 - Identify if all required fields (verb, request, clientip and response) are created
-- If it is a match, replace the message with ``%{verb} received: %{request} from ${clientip} with response %{response}``
+- If it is a match, replace the message with ``%{verb} received: %{request} from %{clientip} with response %{response}``
 - If it is not a match, add a tag called ``unknown-event``
 
 How can you implement this type of ruling in the pipeline ? Do you have an idea ?
