@@ -22,9 +22,3 @@ Now you can open the file with a text-editor. Do you recognize the log format ?
 `logstash-7.4.0/bin/logstash -f first-pipeline.conf --config.reload.automatic`{{execute HOST1}}
 
 What do you see ? What can be improved ?
-
-### Go for better parsing and discover the pattern
-
-You may have noticed that the **message** field is not yet parsed well. To apply correct parsing we can use a Filter plugin called Grok. Grok seems difficult, but tries to make Regex more user friendly. Also for creating a good Grok line you may want to use the [Grok Debugger site](http://grokdebug.herokuapp.com) or just the Kibana Grok parser.
-
-Now copy the following line to the Grok debug Tester

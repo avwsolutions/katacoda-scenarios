@@ -12,8 +12,12 @@
         "text": "helloworld.md"
       },
       {
-        "title": "Advanced pipeline",
+        "title": "Advanced pipeline part 1",
         "text": "apachelog.md"
+      },
+      {
+        "title": "Advanced pipeline part 2",
+        "text": "groklog.md"
       }
     ],
     "intro": {
