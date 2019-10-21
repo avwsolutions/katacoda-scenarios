@@ -18,6 +18,10 @@
       {
         "title": "Advanced pipeline part 2",
         "text": "groklog.md"
+      },
+      {
+        "title": "Advanced pipeline part 3",
+        "text": "mutatelog.md"
       }
     ],
     "intro": {
