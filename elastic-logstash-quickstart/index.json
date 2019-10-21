@@ -23,7 +23,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
+      "client": [
         {
           "file": "*",
           "target": "/home/scrapbook/tutorial/"
