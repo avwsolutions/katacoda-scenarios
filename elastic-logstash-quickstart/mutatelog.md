@@ -3,6 +3,7 @@ This example shows you about how you can parse an Apache web log using an advanc
 - Use the file as Input
 - Use Grok to parse our lines
 - Use Mutate to enrich to fields
+- Use Date to inject the actual timestamp
 - Use Rubydebug as Output
 
 Read the following for more information, see [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/advanced-pipeline.html)
