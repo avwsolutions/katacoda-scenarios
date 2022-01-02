@@ -1,7 +1,5 @@
-# Starting to work on our data pipeline from Vector to ClickHouse
-
-### Create our initial dastabase for Vector
-`clickhouse-client --query "CREATE DATABASE" IF NOT EXISTS vector --password`{{execute HOST1}}
+### Create our initial database for Vector
+`clickhouse-client --query "CREATE DATABASE IF NOT EXISTS vector" --password`{{execute HOST1}}
 
 # Creating the required table for syslog storage
 
@@ -19,6 +17,7 @@ Trick here is that we convert the timestamp to an Unixbased format, which here b
 .timestamp = to_unix_timestamp(to_timestamp!(.timestamp))
 ```
 
+### Create actual syslog table
 Now let's create the actual *syslog* table.
 
 `clickhouse-client --query "CREATE TABLE IF NOT EXISTS vector.syslog ( \
@@ -35,3 +34,13 @@ Now let's create the actual *syslog* table.
 ) ENGINE = MergeTree()\
 ORDER BY\
     toYYYYMMDD(timestamp)" --password`{{execute HOST1}}
+
+# Start data ingestion
+It's time to start vector again to ingest some data.
+`vector --config ~/sample_3.toml`{{execute HOST1}}
+
+Open an additional Terminal tab or break the vector process.
+# Quering data from the ClickHouse client
+`clickhouse-client --query "SELECT * FROM vector.syslog" --password`{{execute HOST1}}
+
+Great !! You have made it, a simple integration between Vector and ClickHouse. Next thing (we will add later) is creating some awesome dashboards with Grafana.

@@ -21,4 +21,4 @@ table = "syslog"
 compression = "gzip"
 auth.password = "stroopwafels"
 auth.strategy = "basic"
-auth.user = "default
+auth.user = "default"
