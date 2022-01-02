@@ -11,7 +11,7 @@ if you want to learn more about vector, please visit the [Vector reference site]
 For storing the actual Observability data we will use ClickHouse Columnar Database. ClickHouse is a high-speed columnn-oriented database.
 By nature ClickHouse is very efficient in storing high data volumes. ClickHouse is using well-known SQL language, so easy to adopt.
 
-if you want to learn more about ClickHouse, please visit [ClickHouse intro](https://clickhouse.com/docs/en/)
+if you want to learn more about ClickHouse, please visit [ClickHouse reference site](https://clickhouse.com/docs/en/)
 
 During this tutorial we will
 - Do a quickstart with Vector
