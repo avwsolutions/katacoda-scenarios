@@ -23,7 +23,7 @@ During the interactive installation you will be asked to set the *default user* 
 `service clickhouse-server start`{{execute HOST1}}
 
 ### Use the clickhouse-client to verify database connectivity
-`clickhouse-client --query "SHOW DATABASES --password"`{{execute HOST1}}
+`clickhouse-client --query "SHOW DATABASES" --password`{{execute HOST1}}
 
 ### Create our initial dastabase for Vector
-`clickhouse-client --query "CREATE DATABASE IF NOT EXISTS vector --password"`{{execute HOST1}}
+`clickhouse-client --query "CREATE DATABASE" IF NOT EXISTS vector --password`{{execute HOST1}}
