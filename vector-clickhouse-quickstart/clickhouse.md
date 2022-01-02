@@ -40,7 +40,7 @@ ORDER BY\
     toYYYYMMDD(timestamp)" --password`{{execute HOST1}}
 
 ### Import your first data record 
-`clickhouse-client --query "INSERT INTO sample.hello" --password < ~/simple_data.tsv`{{execute HOST1}}
+`clickhouse-client --query "INSERT INTO sample.hello FORMAT TSV" --password < ~/simple_data.tsv`{{execute HOST1}}
 
 ### Query our Hello World
 `clickhouse-client --query "SELECT * FROM sample.hello WHERE year = '2022'
