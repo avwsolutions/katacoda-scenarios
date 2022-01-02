@@ -7,8 +7,11 @@
 Please click 'y' to continue the installation.
 ### Check if Vector is installed correctly
 
+First reload our bash profile.
 `source ~/.profile`{{execute HOST1}}
-`vector --version`{{execute HOST1}}ß
+
+Now check if vector is correctly installed.
+`vector --version`{{execute HOST1}}
 
 ### Everybody needs a Hello World sample
 
@@ -16,3 +19,5 @@ Please click 'y' to continue the installation.
 ### Now we want JSON using the demo_logs sample package
 
 `vector --config ~/sample_2.toml`{{execute HOST1}}
+
+Use *CTRL-C* to stop Vector for processing the sample logging.

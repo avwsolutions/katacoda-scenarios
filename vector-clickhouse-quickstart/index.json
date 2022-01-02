@@ -4,8 +4,8 @@
   "details": {
     "steps": [
       {
-        "title": "Setup Vector",
-        "text": "setup.md"
+        "title": "Quick start with Vector data pipelines",
+        "text": "vector.md"
       }
     ],
     "intro": {
