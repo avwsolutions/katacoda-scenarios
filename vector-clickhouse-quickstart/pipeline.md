@@ -9,7 +9,7 @@ As foundation we will use the 'demo_logs' configuration that we previously used.
 {"appname":"shaneIxD","facility":"ntp","hostname":"random.de","message":"Pretty pretty pretty good","msgid":"ID575","procid":6764,"severity":"warning","source_type":"demo_logs","timestamp":"2022-01-02T12:09:24.585Z","version":1}
 ```
 
-Unluckely for us timestamps that are delived in **ISO8601** format are not stored by default.  We can solve this on both client or server side. For example we chose to enhance our remap code based on [**Vector Remap Language (VRL)**(https://vector.dev/docs/reference/vrl/)] a little bit.
+Unluckely for us timestamps that are delived in **ISO8601** format are not stored by default.  We can solve this on both client or server side. For example we chose to enhance our remap code based on [Vector Remap Language (VRL)](https://vector.dev/docs/reference/vrl/)] a little bit.
 
 Trick here is that we convert the timestamp to an Unixbased format, which here by default is in Seconds(since Epoch).
 
