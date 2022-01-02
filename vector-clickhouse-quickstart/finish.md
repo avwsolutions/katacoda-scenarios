@@ -2,7 +2,7 @@
 
 ** Congratulations ** 
 
-You are now ready to use Vector and Clickhouse for your daily job !!!
+You are now ready to use Vector and ClickHouse for your daily job !!!
 
 I hope you enjoyed it.
 
