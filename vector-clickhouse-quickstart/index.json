@@ -28,6 +28,6 @@
     "showdashboard": true
   },
   "backend": {
-    "imageid": "ubuntu:20.04"
+    "imageid": "ubuntu:21.10"
   }
 }
