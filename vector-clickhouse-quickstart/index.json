@@ -1,6 +1,6 @@
 {
-  "title": "Vector Clickhouse Quickstart",
-  "description": "Quickstart for learning Vector setup, Configuration and connecting it to Clickhouse",
+  "title": "Vector ClickHouse Tutorial",
+  "description": "Tutorial for learning Vector, Pipeline Configuration and connecting it to ClickHouse",
   "details": {
     "steps": [
       {
@@ -8,8 +8,12 @@
         "text": "vector.md"
       },
       {
-        "title": "Quick start with Clickhouse Columnar data store",
+        "title": "Quick start with ClickHouse Columnar data store",
         "text": "clickhouse.md"
+      },
+      {
+        "title": "Setting up the data pipeline from Vector to ClickHouse",
+        "text": "pipeline.md"
       }
     ],
     "intro": {
