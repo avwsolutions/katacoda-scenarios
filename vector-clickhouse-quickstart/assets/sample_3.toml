@@ -1,0 +1,21 @@
+[sources.generate_syslog]
+type = "demo_logs"
+format = "syslog"
+count = 100
+
+[transforms.remap_syslog]
+inputs = [ "generate_syslog"]
+type = "remap"
+source = '''
+  structured = parse_syslog!(.message)
+  . = merge(., structured)
+'''
+
+[sinks.emit_syslog]
+type = "clickhouse"
+inputs = [ "remap_syslog" ]
+database = "vector"
+endpoint = "http://localhost:8123"
+table = "syslog"
+compression = "gzip"
+auth.password = "stroopwafels"
