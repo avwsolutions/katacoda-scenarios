@@ -37,9 +37,7 @@ ORDER BY\
 
 # Start data ingestion
 It's time to start vector again to ingest some data.
-`vector --config ~/sample_3.toml`{{execute HOST1}}
-
-Open an additional Terminal tab or break the vector process.
+`vector --config ~/sample_3.toml &`{{execute HOST1}}
 # Quering data from the ClickHouse client
 `clickhouse-client --query "SELECT * FROM vector.syslog" --password`{{execute HOST1}}
 
