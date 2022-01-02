@@ -28,6 +28,6 @@
     "showdashboard": true
   },
   "backend": {
-    "imageid": "ubuntu:2110"
+    "imageid": "ubuntu:2004"
   }
 }
