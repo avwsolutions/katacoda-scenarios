@@ -21,3 +21,5 @@ Now check if vector is correctly installed.
 `vector --config ~/sample_2.toml`{{execute HOST1}}
 
 Use *CTRL-C* to stop Vector for processing the sample logging.
+
+Do you want to learn more about Vector? I really can recommend following the more extensive tutorial here [Vector Tutorial](https://vector.dev/docs/setup/quickstart/).
