@@ -25,5 +25,20 @@ During the interactive installation you will be asked to set the *default user* 
 ### Use the clickhouse-client to verify database connectivity
 `clickhouse-client --query "SHOW DATABASES" --password`{{execute HOST1}}
 
-### Create our initial dastabase for Vector
-`clickhouse-client --query "CREATE DATABASE" IF NOT EXISTS vector --password`{{execute HOST1}}
+### Create our first database
+`clickhouse-client --query "CREATE DATABASE" IF NOT EXISTS sample --password`{{execute HOST1}}
+
+### Create our first table
+`clickhouse-client --query "CREATE TABLE IF NOT EXISTS sample.hello ( \
+    timestamp DateTime,\
+    message String,\
+    sender String,\
+    year UInt16,\
+    receiver String
+) ENGINE = MergeTree()\
+ORDER BY\
+    toYYYYMMDD(timestamp)" --password`{{execute HOST1}}
+
+
+`clickhouse-client --query "INSERT INTO sample.hello" < ~/simple_data.tsv`{{execute HOST1}}
+

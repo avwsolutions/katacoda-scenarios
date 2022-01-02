@@ -9,6 +9,7 @@ type = "remap"
 source = '''
   structured = parse_syslog!(.message)
   . = merge(., structured)
+  .timestamp = to_unix_timestamp(to_timestamp!(.timestamp))
 '''
 
 [sinks.emit_syslog]
@@ -19,3 +20,5 @@ endpoint = "http://localhost:8123"
 table = "syslog"
 compression = "gzip"
 auth.password = "stroopwafels"
+auth.strategy = "basic"
+auth.user = "default
