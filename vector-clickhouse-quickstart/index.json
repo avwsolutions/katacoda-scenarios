@@ -28,6 +28,6 @@
     "showdashboard": true
   },
   "backend": {
-    "imageid": "centos"
+    "imageid": "ubuntu"
   }
 }
