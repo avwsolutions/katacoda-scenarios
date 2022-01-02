@@ -1,15 +1,11 @@
-### Install Java as prerequisite 
+### Install Vector using the installation script
 
-`yum install java -y`{{execute HOST1}}
+`curl --proto '=https' --tlsv1.2 -sSf https://sh.vector.dev | bash`{{execute HOST1}}
 
-### Download the 7.4.0 tarball from elastic.co
+### Check if Vector is installed correctly
 
-`curl -O https://artifacts.elastic.co/downloads/logstash/logstash-7.4.0.tar.gz`{{execute HOST1}}
+`vector --version`{{execute HOST1}}
 
-### Extract the tar package to your home directory
+### Everybody needs a Hello World sample
 
-`tar -xzvf logstash-7.4.0.tar.gz`{{execute HOST1}}
-
-### Now validate logstash by requesting the version
-
-`logstash-7.4.0/bin/logstash --version`{{execute HOST1}}
+`echo 'Hello world!' | vector --config .tutorial/sample_1.toml`{{execute HOST1}}
