@@ -26,7 +26,7 @@ During the interactive installation you will be asked to set the *default user* 
 `clickhouse-client --query "SHOW DATABASES" --password`{{execute HOST1}}
 
 ### Create our first database
-`clickhouse-client --query "CREATE DATABASE" IF NOT EXISTS sample --password`{{execute HOST1}}
+`clickhouse-client --query "CREATE DATABASE IF NOT EXISTS sample" --password`{{execute HOST1}}
 
 ### Create our first table
 `clickhouse-client --query "CREATE TABLE IF NOT EXISTS sample.hello ( \
@@ -39,6 +39,12 @@ During the interactive installation you will be asked to set the *default user* 
 ORDER BY\
     toYYYYMMDD(timestamp)" --password`{{execute HOST1}}
 
+### Import your first data record 
+`clickhouse-client --query "INSERT INTO sample.hello" --password < ~/simple_data.tsv`{{execute HOST1}}
 
-`clickhouse-client --query "INSERT INTO sample.hello" < ~/simple_data.tsv`{{execute HOST1}}
+### Query our Hello World
+`clickhouse-client --query "SELECT * FROM sample.hello WHERE year = '2022'
+" --password`{{execute HOST1}}
 
+
+Do you want to learn more about ClickHouse? I really can recommend following the more extensive tutorial here [ClickHouse Tutorial](https://clickhouse.com/docs/en/getting-started/tutorial/).
