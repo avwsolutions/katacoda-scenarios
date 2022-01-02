@@ -1,0 +1,33 @@
+{
+  "title": "Vector Clickhouse Quickstart",
+  "description": "Quickstart for learning Vector setup, Configuration and connecting it to Clickhouse",
+  "details": {
+    "steps": [
+      {
+        "title": "Setup Vector",
+        "text": "setup.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "*",
+          "target": "/home/scrapbook/tutorial/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true
+  },
+  "backend": {
+    "imageid": "centos"
+  }
+}
