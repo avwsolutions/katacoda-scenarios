@@ -7,7 +7,7 @@
 Please click 'y' to continue the installation.
 ### Check if Vector is installed correctly
 
-`source ~/.profile`{{}execute HOST1}}
+`source ~/.profile`{{execute HOST1}}
 `vector --version`{{execute HOST1}}ß
 
 ### Everybody needs a Hello World sample
