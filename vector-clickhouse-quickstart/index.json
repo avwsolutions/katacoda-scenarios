@@ -6,6 +6,10 @@
       {
         "title": "Quick start with Vector data pipelines",
         "text": "vector.md"
+      },
+      {
+        "title": "Quick start with Clickhouse Columnar data store",
+        "text": "clickhouse.md"
       }
     ],
     "intro": {
